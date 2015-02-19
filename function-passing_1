@@ -1,0 +1,10 @@
+function say(word) {
+  console.log(word);
+}
+
+function execute(someFunction, value) {
+  someFunction(value);
+}
+
+// Passing the function say as the first parameter, not the return value of say
+execute(say, "Hello");
