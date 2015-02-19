@@ -1,0 +1,17 @@
+var sys = require("sys"),
+my_http = require("http");
+
+// request object contains information about the request from the server
+// response object handles response from the server
+
+my_http.createServer(function(request,response) {
+  sys.puts("I got kicked");
+
+  // Set the header of the response as a text/plain content
+  response.writeHeader(200, {"Content-Type": "text/plain"});
+
+  response.write("Hello World"); // Outputs "Hello World"
+  response.end(); // Ends the output stream
+}).listen(8080);
+
+sys.puts("Server Running on 8080");
