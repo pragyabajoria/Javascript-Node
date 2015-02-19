@@ -1,10 +1,1 @@
-var fs = require ('fs')
 
-/* 
-Buffer objects are Node's way of efficiently representing arbitray arrays of data, 
-whether its ascii, binary or some other format. Buffer objects can be converted to Strings, 
-simply by calling the toString() method. */
-
-var contents = fs.readFileSync(process.argv[2]);
-var lines = contents.toString().split('\n').length - 1;
-console.log(lines);
